@@ -95,24 +95,25 @@ const quizCreator = () => {
 
 // Verification des options si bonne ou mauvaise
 const checker = (userOption) => {
-  let userSolution = userOption.innertText
-  let question = document.getElementsByClassName('container_mid')[questionCount]
-  let options = question.querySelectorAll('.option_div')
+  let userSolution = userOption.innertText;
+  let question =
+    document.getElementsByClassName("container_mid")[questionCount];
+  let options = question.querySelectorAll(".option_div");
 
   // si on click est c'est la bonne reponse le mettre dans un objet
-  if(userSolution === quizzArray[questionCount].correct){
-    userOption.classList.add('correct')
-    scoreCount++
+  if (userSolution === quizzArray[questionCount].correct) {
+    userOption.classList.add("correct");
+    scoreCount++;
   } else {
-    userOption.classList.add('incorrect')
+    userOption.classList.add("incorrect");
     // pour afficher la bonne reponse
     options.forEach((element) => {
-      if(element.innertText == quizzArray[questionCount].correct){
-        element.classList.add('correct')
+      if (element.innertText == quizzArray[questionCount].correct) {
+        element.classList.add("correct");
       }
-    })
+    });
   }
-}
+};
 
 // Initialisation
 const initial = () => {
