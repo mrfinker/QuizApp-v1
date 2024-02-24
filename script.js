@@ -105,6 +105,7 @@ const checker = (userOption) => {
     scoreCount++
   } else {
     userOption.classList.add('incorrect')
+    // pour afficher la bonne reponse
     options.forEach((element) => {
       if(element.innertText === quizzArray[questionCount].correct){
         element.classList.add('correct')
