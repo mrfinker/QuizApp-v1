@@ -100,7 +100,7 @@ const checker = (userOption) => {
   let options = question.querySelectorAll('.option_div')
 
   // si on click est c'est la bonne reponse le mettre dans un objet
-  if(userOption === quizzArray[questionCount].correct){
+  if(userSolution === quizzArray[questionCount].correct){
     userOption.classList.add('correct')
     scoreCount++
   } else {
