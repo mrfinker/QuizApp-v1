@@ -37,3 +37,7 @@ const quizzArray = [
     correct: "Axel",
   },
 ];
+
+const quizCreator = () => {
+  quizzArray.sort(() => Math.random() - 0.5)
+}
