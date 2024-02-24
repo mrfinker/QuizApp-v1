@@ -63,7 +63,7 @@ const quizCreator = () => {
     div.classList.add("container_mid", "hide");
 
     // Nombre de question
-    countOfQuestion.innerHTML = 1 + "à" + quizzArray.length + "Questions";
+    countOfQuestion.innerHTML = 1 + " à " + quizzArray.length + " Questions";
 
     // Questions
     let question_div = document.createElement("p");
