@@ -1,5 +1,4 @@
 // debut
-const quizDisplay = document.getElementById("display");
 let quizContainer = document.getElementById("container");
 let nextBtn = document.getElementById("next_button");
 let displayContainer = document.getElementById("display_container");
@@ -38,6 +37,18 @@ const quizzArray = [
   },
 ];
 
+// Afficher le quizz
+const quizDisplay = (questionCount) => {
+  let quizCards = document.querySelectorAll('.container_mid')
+
+  // cacher les autres cards
+  quizCards.forEach((card) => {
+    card.classList.add('hide')
+  })
+
+  quizCards[questionCount].classList.remove('hide')
+}
+
 const quizCreator = () => {
   // Questions aleatoire
   quizzArray.sort(() => Math.random() - 0.5);
@@ -69,3 +80,9 @@ const quizCreator = () => {
     quizContainer.appendChild(div);
   }
 };
+
+// Cacher les questions au debut
+window.onload = () => {
+  startScreen.classList.remove('hide')
+  displayContainer.classList.add('hide')
+}
