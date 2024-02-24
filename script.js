@@ -113,6 +113,11 @@ const checker = (userOption) => {
       }
     });
   }
+
+  clearInterval(countdown)
+  options.forEach((element) => {
+    element.disabled = true
+  })
 };
 
 // Initialisation
