@@ -39,5 +39,11 @@ const quizzArray = [
 ];
 
 const quizCreator = () => {
+  // Questions aleatoire
   quizzArray.sort(() => Math.random() - 0.5)
+
+  // generation du quiz
+  for(let i of quizzArray){
+    
+  }
 }
