@@ -94,7 +94,11 @@ const quizCreator = () => {
 };
 
 // Verification des options si bonne ou mauvaise
-
+const checker = (userOption) => {
+  let userSolution = userOption.innertText
+  let question = document.getElementsByClassName('container_mid')[questionCount]
+  let options = question.querySelectorAll('.option_div')
+}
 
 // Initialisation
 const initial = () => {
