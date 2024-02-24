@@ -39,15 +39,15 @@ const quizzArray = [
 
 // Afficher le quizz
 const quizDisplay = (questionCount) => {
-  let quizCards = document.querySelectorAll('.container_mid')
+  let quizCards = document.querySelectorAll(".container_mid");
 
   // cacher les autres cards
   quizCards.forEach((card) => {
-    card.classList.add('hide')
-  })
+    card.classList.add("hide");
+  });
 
-  quizCards[questionCount].classList.remove('hide')
-}
+  quizCards[questionCount].classList.remove("hide");
+};
 
 const quizCreator = () => {
   // Questions aleatoire
@@ -81,8 +81,24 @@ const quizCreator = () => {
   }
 };
 
+// Initialisation
+const initial = () => {
+  quizContainer.innerHTML = "";
+  questionCount = 0;
+  scoreCount = 0;
+  count = 11;
+  quizCreator();
+  quizDisplay(questionCount);
+};
+
+// Quand on clique sur le bouton debuter
+startButton.addEventListener('click', () => {
+  startScreen.classList.add('hide')
+  displayContainer.classList.remove('hide')
+})
+
 // Cacher les questions au debut
 window.onload = () => {
-  startScreen.classList.remove('hide')
-  displayContainer.classList.add('hide')
-}
+  startScreen.classList.remove("hide");
+  displayContainer.classList.add("hide");
+};
