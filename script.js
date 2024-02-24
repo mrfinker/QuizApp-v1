@@ -40,25 +40,32 @@ const quizzArray = [
 
 const quizCreator = () => {
   // Questions aleatoire
-  quizzArray.sort(() => Math.random() - 0.5)
+  quizzArray.sort(() => Math.random() - 0.5);
 
   // generation du quiz
-  for(let i of quizzArray){
+  for (let i of quizzArray) {
     // Options aleatoire
-    i.options.sort(() => Math.random() - 0.5)
+    i.options.sort(() => Math.random() - 0.5);
 
     // Creation de card des questions
-    let div = document.createElement('div')
-    div.classList.add('container_mid');
+    let div = document.createElement("div");
+    div.classList.add("container_mid", "hide");
 
     // Nombre de question
-    countOfQuestion.innerHTML = 1 + 'à' + quizzArray.length + 'Questions'
+    countOfQuestion.innerHTML = 1 + "à" + quizzArray.length + "Questions";
 
     // Questions
-    let question_div = document.createElement('p')
+    let question_div = document.createElement("p");
     question_div.innerHTML = i.question;
-    div.appendChild(question_div)
+    div.appendChild(question_div);
 
     // options
+    div.innerHTML += `
+    <button class="option_div" onclick="checker(this)">${i.options[0]}</button>
+    <button class="option_div" onclick="checker(this)">${i.options[1]}</button>
+    <button class="option_div" onclick="checker(this)">${i.options[2]}</button>
+    <button class="option_div" onclick="checker(this)">${i.options[3]}</button>
+    `;
+    quizContainer.appendChild(div);
   }
-}
+};
