@@ -55,7 +55,7 @@ nextBtn.addEventListener(
   "click",
   (displayNext = () => {
     questionCount += 1;
-    if (questionCount === quizzArray.length) {
+    if (questionCount == quizzArray.length) {
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
       userScore.innerHTML =
