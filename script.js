@@ -43,6 +43,25 @@ const quizzArray = [
   },
 ];
 
+// Recommencer le quizz
+restart.addEventListener('click', () => {
+  initial()
+  displayContainer.classList.remove('hide')
+  scoreContainer.classList.add('hide')
+})
+
+// Button suivant
+nextBtn.addEventListener('click', (displayNext = () => {
+  questionCount += 1
+  if(questionCount === quizzArray.length){
+    displayContainer.classList.add('hide')
+    scoreContainer.classList.remove('hide')
+    userScore.innerHTML = 'Votre score est' + scoreCount +  'sur' + questionCount
+  } else {
+    
+  }
+}))
+
 // Compteur
 const timerDisplay = () => {
   countdown = setInterval(() => {
