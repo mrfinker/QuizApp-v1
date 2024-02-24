@@ -46,7 +46,7 @@ const timerDisplay = () => {
       clearInterval(countdown)
       displayNext()
     }
-  })
+  }, 1000)
 }
 
 // Afficher le quizz
