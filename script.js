@@ -7,7 +7,7 @@ let userScore = document.getElementById("user_score");
 let startButton = document.getElementById("start_button");
 let timeLeft = document.querySelector(".time_left");
 let countOfQuestion = document.querySelector(".number_of_question");
-let scoreContainer = document.querySelector("score_container");
+let scoreContainer = document.querySelector(".score_container");
 let startScreen = document.querySelector(".start_screen");
 let questionCount;
 let scoreCount = 0;
