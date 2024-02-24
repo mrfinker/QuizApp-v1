@@ -31,7 +31,7 @@ const quizzArray = [
     correct: "caleb",
   },
   {
-    id: "1",
+    id: "2",
     question: "Qui est le plus intelligent ?",
     options: ["caleb", "Axel", "theresia", "Alfio"],
     correct: "Axel",
@@ -44,6 +44,8 @@ const quizCreator = () => {
 
   // generation du quiz
   for(let i of quizzArray){
-    
+
   }
 }
+
+console.log(quizzArray.sort(() => Math.random() - 0.5));
