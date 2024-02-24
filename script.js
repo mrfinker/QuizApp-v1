@@ -129,7 +129,7 @@ const quizCreator = () => {
 
 // Verification des options si bonne ou mauvaise
 const checker = (userOption) => {
-  let userSolution = userOption.innertText;
+  let userSolution = userOption.innerText;
   let question =
     document.getElementsByClassName("container_mid")[questionCount];
   let options = question.querySelectorAll(".option_div");
@@ -142,7 +142,7 @@ const checker = (userOption) => {
     userOption.classList.add("incorrect");
     // pour afficher la bonne reponse
     options.forEach((element) => {
-      if (element.innertText == quizzArray[questionCount].correct) {
+      if (element.innerText == quizzArray[questionCount].correct) {
         element.classList.add("correct");
       }
     });
