@@ -20,26 +20,26 @@ const quizzArray = [
   {
     id: "0",
     question: "Qui est le plus beau ?",
-    options: ["caleb", "Axel", "theresia", "Alfio"],
+    options: ["Caleb", "Axel", "Theresia", "Alfio"],
     correct: "Alfio",
   },
   {
     id: "1",
     question: "Qui est le plus fort ?",
-    options: ["caleb", "Axel", "theresia", "Alfio"],
-    correct: "caleb",
+    options: ["Caleb", "Axel", "Theresia", "Alfio"],
+    correct: "Caleb",
   },
   {
     id: "2",
     question: "Qui est le plus intelligent ?",
-    options: ["caleb", "Axel", "theresia", "Alfio"],
+    options: ["Caleb", "Axel", "Theresia", "Alfio"],
     correct: "Axel",
   },
   {
     id: "3",
     question: "Qui est la plus belle ?",
-    options: ["caleb", "Axel", "theresia", "Alfio"],
-    correct: "theresia",
+    options: ["Caleb", "Axel", "Theresia", "Alfio"],
+    correct: "Theresia",
   },
 ];
 
