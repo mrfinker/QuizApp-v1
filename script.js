@@ -98,6 +98,19 @@ const checker = (userOption) => {
   let userSolution = userOption.innertText
   let question = document.getElementsByClassName('container_mid')[questionCount]
   let options = question.querySelectorAll('.option_div')
+
+  // si on click est c'est la bonne reponse le mettre dans un objet
+  if(userOption === quizzArray[questionCount].correct){
+    userOption.classList.add('correct')
+    scoreCount++
+  } else {
+    userOption.classList.add('incorrect')
+    options.forEach((element) => {
+      if(element.innertText === quizzArray[questionCount].correct){
+        element.classList.add('correct')
+      }
+    })
+  }
 }
 
 // Initialisation
