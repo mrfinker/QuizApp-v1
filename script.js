@@ -59,10 +59,10 @@ nextBtn.addEventListener(
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
       userScore.innerHTML =
-        "Votre score est" + scoreCount + "sur" + questionCount;
+        "Votre score est" + scoreCount + " sur " + questionCount;
     } else {
       countOfQuestion.innerHTML =
-        questionCount + 1 + "sur" + quizzArray.length + "questions";
+        questionCount + 1 + " sur " + quizzArray.length + "questions";
       quizDisplay(questionCount);
       count = 11;
       clearInterval(countdown);
