@@ -41,13 +41,13 @@ const quizzArray = [
 const timerDisplay = () => {
   countdown = setInterval(() => {
     count--;
-    timeLeft.innerHTML = `${count}s`
-    if(count === 0){
-      clearInterval(countdown)
-      displayNext()
+    timeLeft.innerHTML = `${count}s`;
+    if (count === 0) {
+      clearInterval(countdown);
+      displayNext();
     }
-  }, 1000)
-}
+  }, 1000);
+};
 
 // Afficher le quizz
 const quizDisplay = (questionCount) => {
@@ -93,22 +93,27 @@ const quizCreator = () => {
   }
 };
 
+// Verification des options si bonne ou mauvaise
+
+
 // Initialisation
 const initial = () => {
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
   count = 11;
+  clearInterval(countdown);
+  timerDisplay();
   quizCreator();
   quizDisplay(questionCount);
 };
 
 // Quand on clique sur le bouton debuter
-startButton.addEventListener('click', () => {
-  startScreen.classList.add('hide')
-  displayContainer.classList.remove('hide')
-  initial()
-})
+startButton.addEventListener("click", () => {
+  startScreen.classList.add("hide");
+  displayContainer.classList.remove("hide");
+  initial();
+});
 
 // Cacher les questions au debut
 window.onload = () => {
