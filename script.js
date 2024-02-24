@@ -56,6 +56,9 @@ const quizCreator = () => {
 
     // Questions
     let question_div = document.createElement('p')
-    question_div.innerHTML = i.question
+    question_div.innerHTML = i.question;
+    div.appendChild(question_div)
+
+    // options
   }
 }
