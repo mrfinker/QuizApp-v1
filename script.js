@@ -55,5 +55,7 @@ const quizCreator = () => {
     countOfQuestion.innerHTML = 1 + 'à' + quizzArray.length + 'Questions'
 
     // Questions
+    let question_div = document.createElement('p')
+    question_div.innerHTML = i.question
   }
 }
