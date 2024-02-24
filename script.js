@@ -37,6 +37,18 @@ const quizzArray = [
   },
 ];
 
+// Compteur
+const timerDisplay = () => {
+  countdown = setInterval(() => {
+    count--;
+    timeLeft.innerHTML = `${count}s`
+    if(count === 0){
+      clearInterval(countdown)
+      displayNext()
+    }
+  })
+}
+
 // Afficher le quizz
 const quizDisplay = (questionCount) => {
   let quizCards = document.querySelectorAll(".container_mid");
