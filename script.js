@@ -62,7 +62,7 @@ nextBtn.addEventListener(
         "Votre score est " + scoreCount + " sur " + questionCount;
     } else {
       countOfQuestion.innerHTML =
-        questionCount + 1 + " sur " + quizzArray.length + "questions";
+        questionCount + 1 + " sur " + quizzArray.length + " questions";
       quizDisplay(questionCount);
       count = 11;
       clearInterval(countdown);
