@@ -44,8 +44,16 @@ const quizCreator = () => {
 
   // generation du quiz
   for(let i of quizzArray){
+    // Options aleatoire
+    i.options.sort(() => Math.random() - 0.5)
 
+    // Creation de card des questions
+    let div = document.createElement('div')
+    div.classList.add('container_mid');
+
+    // Nombre de question
+    countOfQuestion.innerHTML = 1 + 'à' + quizzArray.length + 'Questions'
+
+    // Questions
   }
 }
-
-console.log(quizzArray.sort(() => Math.random() - 0.5));
