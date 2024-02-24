@@ -95,6 +95,7 @@ const initial = () => {
 startButton.addEventListener('click', () => {
   startScreen.classList.add('hide')
   displayContainer.classList.remove('hide')
+  initial()
 })
 
 // Cacher les questions au debut
